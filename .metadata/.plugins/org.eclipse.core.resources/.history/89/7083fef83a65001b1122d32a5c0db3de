@@ -35,9 +35,6 @@
 		where board_title like '%$board_title$%'
 		order by board_no desc
 	</select>
-		<!-- '%' || #board_title# || '%' -->
-		<!-- '%$board_title$%' -->		
-		
 	<update id="setCountIncrement" parameterClass="int">
 		update jdbc_board set
 		board_cnt = board_cnt + 1

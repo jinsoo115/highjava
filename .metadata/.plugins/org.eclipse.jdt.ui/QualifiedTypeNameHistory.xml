@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="solution.MatrixSum"/>
-<fullyQualifiedTypeName name="solution.Harsa"/>
 <fullyQualifiedTypeName name="java.lang.Character"/>
 <fullyQualifiedTypeName name="solution.xSpaceNInt"/>
 <fullyQualifiedTypeName name="solution.KaKaoCrane"/>
@@ -56,8 +54,10 @@
 <fullyQualifiedTypeName name="java.nio.charset.Charset"/>
 <fullyQualifiedTypeName name="com.ibatis.common.resources.Resources"/>
 <fullyQualifiedTypeName name="java.io.Reader"/>
-<fullyQualifiedTypeName name="com.ibatis.sqlmap.client.SqlMapClient"/>
 <fullyQualifiedTypeName name="com.ibatis.sqlmap.client.SqlMapClientBuilder"/>
 <fullyQualifiedTypeName name="kr.or.ddit.basic.LprodVO"/>
+<fullyQualifiedTypeName name="java.lang.RuntimeException"/>
+<fullyQualifiedTypeName name="com.ibatis.sqlmap.client.SqlMapClient"/>
 <fullyQualifiedTypeName name="java.lang.Object"/>
+<fullyQualifiedTypeName name="kr.or.ddit.util.SqlMapUtil"/>
 </qualifiedTypeNameHistroy>
