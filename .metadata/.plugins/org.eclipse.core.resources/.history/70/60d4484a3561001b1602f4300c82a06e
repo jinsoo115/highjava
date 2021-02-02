@@ -1,0 +1,46 @@
+package kr.or.ddit.mvc.service;
+
+import java.util.List;
+
+import kr.or.ddit.mvc.dao.IMemberDao;
+import kr.or.ddit.mvc.vo.MemberVo;
+
+public class MemberServiceImpl implements IMemberService {
+	private IMemberDao memDao;
+	
+	// 생성자
+	public MemberServiceImpl(){
+		memDao = new IMemberDao();
+	}
+	
+	
+	@Override
+	public int insertMember(MemberVo memVo) {
+		return memDao.insertMember(memVo);
+	}
+
+	@Override
+	public int deleteMember(String memId) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public int updateMember(MemberVo memVo) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public List<MemberVo> getAllMember() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public int getMemberCount(String memId) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+}

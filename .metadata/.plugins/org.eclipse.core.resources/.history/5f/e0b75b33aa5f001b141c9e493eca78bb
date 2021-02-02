@@ -1,0 +1,15 @@
+package kr.or.ddit.util;
+
+// JDBC 드라이버를 로딩하고 Connection객체를 생성하는
+// 메서드로 구성된 class 만들기
+public class DBUtil {
+	// static 초기화 블럭
+	static{
+		try {
+			Class.forName("oracle.jdbc.driver.OracleDriver");
+		} catch (ClassNotFoundException e) {
+			System.out.println("드라이버 로딩 실패~");
+			e.printStackTrace();
+		}
+	}
+}

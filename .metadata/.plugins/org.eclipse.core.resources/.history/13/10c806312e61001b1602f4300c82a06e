@@ -1,0 +1,99 @@
+package kr.or.ddit.mvc.dao;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+import java.util.List;
+
+import kr.or.ddit.mvc.vo.MemberVo;
+import kr.or.ddit.util.DBUtil3;
+
+public class MemberDaoImpl implements IMemberDao{
+
+	@Override
+	public int insertMember(MemberVo memVo) {
+		Connection conn = null;
+		PreparedStatement pstmt = null;
+		int cnt = 0;
+		try {
+			conn = DBUtil3.getConnection();
+			String sql = "insert into mymember "
+					+ "(mem_id, mem_name, mem_tel, mem_addr) "
+					+ "values(?, ?, ?, ?)";
+			pstmt = conn.prepareStatement(sql);
+			pstmt.setString(1, memVo.getMem_id());
+			pstmt.setString(2, memVo.getMem_name());
+			pstmt.setString(3, memVo.getMem_tel());
+			pstmt.setString(4, memVo.getMem_addr());
+			
+			cnt = pstmt.executeUpdate();
+		} catch (SQLException e) {
+			cnt = 0;
+			e.printStackTrace();
+		} finally {
+			if(pstmt!=null) try{pstmt.close();}catch(SQLException e){}
+			if(conn!=null) try{conn.close();}catch(SQLException e){}
+		}
+		return cnt;
+	}
+
+	@Override
+	public int deleteMember(String memId) {
+		Connection conn = null;
+		PreparedStatement pstmt = null;
+		int cnt = 0;
+		try {
+			conn = DBUtil3.getConnection();
+			String sql = "delete from mymember where mem_id = ?";
+			pstmt = conn.prepareStatement(sql);
+			pstmt.setString(1, memId);
+			
+			cnt = pstmt.executeUpdate();
+		} catch (SQLException e) {
+			cnt = 0;
+			e.printStackTrace();
+		} finally {
+			if(pstmt!=null) try{pstmt.close();}catch(SQLException e){}
+			if(conn!=null) try{conn.close();}catch(SQLException e){}
+		}
+		return cnt;
+	}
+
+	@Override
+	public int updateMember(MemberVo memVo) {
+		Connection conn = null;
+		PreparedStatement pstmt = null;
+		int cnt = 0;
+		try {
+			conn = DBUtil3.getConnection();
+			String sql = "update mymember set mem_name = ?, mem_tel = ?, mem_addr = ? where mem_id = ? ";
+			pstmt = conn.prepareStatement(sql);
+			pstmt.setString(1, memVo.getMem_name());
+			pstmt.setString(2, memVo.getMem_tel());
+			pstmt.setString(3, memVo.getMem_addr());
+			pstmt.setString(4, memVo.getMem_id());
+			
+			cnt = pstmt.executeUpdate();
+		} catch (SQLException e) {
+			cnt = 0;
+			e.printStackTrace();
+		} finally {
+			if(pstmt!=null) try{pstmt.close();}catch(SQLException e){}
+			if(conn!=null) try{conn.close();}catch(SQLException e){}
+		}
+		return cnt;
+	}
+
+	@Override
+	public List<MemberVo> getAllMember() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public int getMemberCount(String memId) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+}

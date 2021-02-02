@@ -1,0 +1,43 @@
+package kr.or.ddit.mvc.service;
+
+import java.util.List;
+
+import kr.or.ddit.mvc.dao.IMemberDao;
+import kr.or.ddit.mvc.dao.MemberDaoImpl;
+import kr.or.ddit.mvc.vo.MemberVo;
+
+public class MemberServiceImpl implements IMemberService {
+	private IMemberDao memDao;
+	
+	// 생성자
+	public MemberServiceImpl(){
+		memDao = new MemberDaoImpl();
+	}
+	
+	
+	@Override
+	public int insertMember(MemberVo memVo) {
+		return memDao.insertMember(memVo);
+	}
+
+	@Override
+	public int deleteMember(String memId) {
+		return memDao.deleteMember(memId);
+	}
+
+	@Override
+	public int updateMember(MemberVo memVo) {
+		return memDao.updateMember(memVo);
+	}
+
+	@Override
+	public List<MemberVo> getAllMember() {
+		return memDao.getAllMember();
+	}
+
+	@Override
+	public int getMemberCount(String memId) {
+		return memDao.getMemberCount(memId);
+	}
+
+}

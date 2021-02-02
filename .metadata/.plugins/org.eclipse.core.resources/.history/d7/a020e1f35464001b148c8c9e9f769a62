@@ -1,0 +1,33 @@
+package kr.or.ddit.basic;
+
+import java.io.Reader;
+import java.nio.charset.Charset;
+import java.util.Scanner;
+
+import com.ibatis.common.resources.Resources;
+import com.ibatis.sqlmap.client.SqlMapClient;
+import com.ibatis.sqlmap.client.SqlMapClientBuilder;
+
+public class LprodIbatisTest {
+	// iBatis를 이용하여 DB자료를 처리하는 방법 및 순서
+	
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		
+		// 1. iBatis의 환경 설정파일(sqlMapConfig.xml)을 읽어와서 실행하기
+		try {
+			// 1-1. 문자 인코딩 캐릭터셋 설정
+			Charset charset = Charset.forName("UTF-8");
+			Resources.setCharset(charset);
+			
+			// 1-2. 환경 설정 파일 읽어오기
+			Reader rd = Resources.getResourceAsReader("sqlMapConfig.xml");
+			
+			// 1-3. 위에서 읽어온 Reader객체를 이용하여 실제 환경 설정을
+			//		진행한 후 SQL문을 호출해서 실행할 객체를 생성한다.
+			SqlMapClient smc = SqlMapClientBuilder.buildSqlMapClient(rd);
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+	}
+}

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sqlMapConfig
+	PUBLIC "-//ibatis.apache.org//DTD SQL Map Config 2.0//EN"
+	"http://ibatis.apache.org/dtd/dql-map-config-2.dtd">
+<!-- 
+	이 문서는 ibatis의 환경 설정 파일입니다.
+ -->
+<sqlMapConfig>
+	
+</sqlMapConfig> 

@@ -1,0 +1,63 @@
+package kr.or.ddit.mvc.dao;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+import java.util.List;
+
+import kr.or.ddit.mvc.vo.BoardVO;
+import kr.or.ddit.util.DBUtil3;
+
+public class BoardDaoImpl implements IBoardDao {
+	Connection conn = null;
+	PreparedStatement pstmt = null;
+	int cnt = 0;
+	@Override
+	public int insertBoard(BoardVO boardVo) {
+		try {
+			conn = DBUtil3.getConnection();
+			String sql = "insert into jdbc_board "
+					+ "()";
+		} catch (SQLException e) {
+			// TODO: handle exception
+		}
+		return 0;
+	}
+
+	@Override
+	public int deleteBoard(int boardNo) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public int updateBoard(int boardNo) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public List<BoardVO> getAllBoard() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<BoardVO> getSelectBoard(int boardNo) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<BoardVO> getSearchBoard(String search) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<BoardVO> getReadBoard(BoardVO boardVo) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

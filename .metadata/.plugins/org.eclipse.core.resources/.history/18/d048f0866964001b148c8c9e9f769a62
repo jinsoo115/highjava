@@ -1,0 +1,40 @@
+package kr.or.ddit.basic;
+
+import java.io.Reader;
+import java.nio.charset.Charset;
+import java.util.Scanner;
+
+import com.ibatis.common.resources.Resources;
+import com.ibatis.sqlmap.client.SqlMapClient;
+import com.ibatis.sqlmap.client.SqlMapClientBuilder;
+
+// jdbcTest 프로젝트에 있는 'jdbcTest06.java'의 처리방법을
+// ibatis를 이용하여 처리하는 것으로 변경하시오.
+
+// 쿼리문이 저장될 xml문서 이름은 'jdbc06.xml'로 한다.
+public class JdbbcTest06ToIbatis {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		try {
+			Charset charset = Charset.forName("UTF-8");
+			Resources.setCharset(charset);
+			
+			Reader rd = Resources.getResourceAsReader("sqlMapConfig.xml");
+			
+			SqlMapClient smc = SqlMapClientBuilder.buildSqlMapClient(rd);
+			rd.close();
+			
+			int lprodId = (int) smc.queryForObject("Lprod.getId");
+			String lprodGu;
+			do {
+				System.out.print("검색할 lprod_gu 입력 : ");
+				lprodGu = sc.next();
+				lprodGu = (lprodGu + "   ").substring(0,4);
+			}while(lprodGu!=null);
+			
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+}

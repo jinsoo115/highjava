@@ -1,0 +1,67 @@
+package kr.or.ddit.basic;
+
+import java.io.Reader;
+import java.nio.charset.Charset;
+import java.util.Scanner;
+
+import com.ibatis.common.resources.Resources;
+import com.ibatis.sqlmap.client.SqlMapClient;
+import com.ibatis.sqlmap.client.SqlMapClientBuilder;
+
+// jdbcTest 프로젝트에 있는 'jdbcTest06.java'의 처리방법을
+// ibatis를 이용하여 처리하는 것으로 변경하시오.
+
+// 쿼리문이 저장될 xml문서 이름은 'jdbc06.xml'로 한다.
+public class JdbcTest06ToIbatis {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		try {
+			Charset charset = Charset.forName("UTF-8");
+			Resources.setCharset(charset);
+			
+			Reader rd = Resources.getResourceAsReader("sqlMapConfig.xml");
+			
+			SqlMapClient smc = SqlMapClientBuilder.buildSqlMapClient(rd);
+			rd.close();
+			
+			System.out.println("insert작업 시작...");
+			int lprodId = (int) smc.queryForObject("jdbc06.getMaxId");
+			System.out.println(lprodId);
+			String lprodGu;
+			int count = 0;
+			do {
+				System.out.print("검색할 lprod_gu 입력 : ");
+				lprodGu = sc.next();
+				lprodGu = (lprodGu + "   ").substring(0,4);
+				count = (int) smc.queryForObject("jdbc06.getCount", lprodGu);
+				if(count == 1) {
+					System.out.println("입력한 상품분류코드" + lprodGu + "는 이미 등록된 코드입니다");
+					System.out.println("다시 입력하세요");
+				}
+			}while(count == 1);
+			System.out.print("lprod_nm 입력 : ");
+			String lprodNm = sc.next();
+			
+			LprodVO lvo = new LprodVO();
+			
+			lvo.setLprod_id(lprodId);
+			lvo.setLprod_gu(lprodGu);
+			lvo.setLprod_nm(lprodNm);
+			
+			Object obj = smc.insert("jdbc06.insertLprod", lvo);
+			
+			if(obj == null) {
+				System.out.println("insert 작업 성공!!!");
+			}else {
+				System.out.println("insert 작업 실패~~~");
+			}
+			
+			System.out.println("insert 작업 끝....");
+			
+			
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+}

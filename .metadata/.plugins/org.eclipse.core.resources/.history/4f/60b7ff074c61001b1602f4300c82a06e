@@ -1,0 +1,44 @@
+package kr.or.ddit.mvc.service;
+
+import java.util.List;
+
+import kr.or.ddit.mvc.dao.BoardDaoImpl;
+import kr.or.ddit.mvc.dao.IBoardDao;
+import kr.or.ddit.mvc.vo.BoardVO;
+
+public class BoardService implements IBoardService {
+	private IBoardDao boardDao;
+	
+	public BoardService() {
+		boardDao = new BoardDaoImpl();
+	}
+	@Override
+	public int insertBoard(BoardVO boardVo) {
+		return boardDao.insertBoard(boardVo);
+	}
+
+	@Override
+	public int deleteBoard(int boardNo) {
+		return boardDao.deleteBoard(boardNo);
+	}
+
+	@Override
+	public int updateBoard(BoardVO boardVo) {
+		return boardDao.updateBoard(boardVo);
+	}
+
+	@Override
+	public List<BoardVO> getAllBoard() {
+		return boardDao.getAllBoard();
+	}
+
+	@Override
+	public BoardVO getSelectBoard(int boardNo) {
+		return boardDao.getSelectBoard(boardNo);
+	}
+
+	@Override
+	public List<BoardVO> getSearchBoard(String search) {
+		return boardDao.getSearchBoard(search);
+	}
+}

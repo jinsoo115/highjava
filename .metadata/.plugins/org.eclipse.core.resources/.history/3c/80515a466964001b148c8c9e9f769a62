@@ -1,0 +1,11 @@
+package kr.or.ddit.basic;
+
+// jdbcTest 프로젝트에 있는 'jdbcTest06.java'의 처리방법을
+// ibatis를 이용하여 처리하는 것으로 변경하시오.
+
+// 쿼리문이 저장될 xml문서 이름은 'jdbc06.xml'로 한다.
+public class JdbbcTest06ToIbatis {
+	public static void main(String[] args) {
+		
+	}
+}

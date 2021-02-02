@@ -1,0 +1,20 @@
+package kr.or.ddit.basic;
+
+import java.nio.charset.Charset;
+import java.util.Scanner;
+
+public class LprodIbatisTest {
+	// iBatis를 이용하여 DB자료를 처리하는 방법 및 순서
+	
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		
+		// 1. iBatis의 환경 설정파일(sqlMapConfig.xml)을 읽어와서 실행하기
+		try {
+			// 1-1. 문자 인코딩 캐릭터셋 설정
+			Charset charset = Charset.forName("UTF-8");
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+	}
+}

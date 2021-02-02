@@ -1,0 +1,10 @@
+package kr.or.ddit.mvc.dao;
+
+import kr.or.ddit.mvc.vo.BoardVO;
+
+public interface IBoardDao {
+	public int insertBoard(BoardVO boardVo);
+	public int deleteBoard(BoardVO boardVo);
+	public int updateBoard(BoardVO boaddVo);
+	public List<BoardVO> getAllMember();
+}

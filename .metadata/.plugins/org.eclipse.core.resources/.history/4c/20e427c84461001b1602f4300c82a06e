@@ -1,0 +1,10 @@
+package kr.or.ddit.mvc.vo;
+
+public class BoardVO {
+	private int BOARD_NO;
+	private String BOARD_TITLE;
+	private String BOARD_WRITER;
+	private String BOARD_DATE;
+	private int BOARD_CNT;
+	private String BOARD_CONTENT;
+}

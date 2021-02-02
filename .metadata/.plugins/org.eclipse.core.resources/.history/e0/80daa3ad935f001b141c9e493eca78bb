@@ -1,0 +1,17 @@
+package kr.or.ddit.basic;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.Statement;
+import java.util.Scanner;
+
+public class jdbcTest05 {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		
+		Connection conn = null;
+		Statement stmt = null;
+		PreparedStatement pstmt = null;
+		
+	}
+}

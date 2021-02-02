@@ -1,0 +1,37 @@
+package kr.or.ddit.mvc.dao;
+
+import kr.or.ddit.mvc.vo.MemberVo;
+
+/**
+ * 실제 DB와 연결해서 SQL문을 수행하여 결과를 작성해서 
+ * Service에 전달하는 interface
+ * 
+ * 각각의 메서드 하나가 DB와 관련된 작업 1개를 수행하도록 작성한다.
+ * 
+ * @author PC-23
+ *
+ */
+public interface IMemberDao {
+	/**
+	 * MemberVo객체에 담겨진 자료를 DB에 insert하는 메서드 
+	 * 
+	 * @param memVo insert할 데이터가 저장된 MemberVo객체
+	 * @return insert 성공 : 1, 실패: 0
+	 */
+	public int insertMember(MemberVo memVo);
+	
+	/**
+	 * 회원ID를 인수로 받아서 해당 회원 정보를 삭제하는 메서드
+	 * @param memId 삭제할 회원ID
+	 * @return 삭제 성공 : 1, 삭제 실패 : 0
+	 */
+	public int deleteMember(String memId);
+	/**
+	 * MemberVO자료를 이용하여 회원 정보를 Update하는 메서드
+	 * @param memVo Update할 회원 정보가 저장된 MemberVO객체
+	 * @return 작업 성공 : 1, 작업 실패 : 0
+	 */
+	public int updateMember(MemberVo memVo);
+	
+	public List<MemberVo> getAllMember();
+}

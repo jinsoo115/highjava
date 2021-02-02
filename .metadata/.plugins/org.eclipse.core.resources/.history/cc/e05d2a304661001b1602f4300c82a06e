@@ -1,0 +1,14 @@
+package kr.or.ddit.mvc.dao;
+
+import java.util.List;
+
+import kr.or.ddit.mvc.vo.BoardVO;
+
+public interface IBoardDao {
+	public int insertBoard(BoardVO boardVo);
+	public int deleteBoard(BoardVO boardVo);
+	public int updateBoard(BoardVO boaddVo);
+	public List<BoardVO> getAllBoard();
+	public List<BoardVO> getSelectBoard();
+	public List<BoardVO> getSearchBoard();
+}
