@@ -1,13 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="java.lang.Character"/>
-<fullyQualifiedTypeName name="solution.xSpaceNInt"/>
-<fullyQualifiedTypeName name="solution.KaKaoCrane"/>
-<fullyQualifiedTypeName name="java.lang.Integer"/>
-<fullyQualifiedTypeName name="java.util.Stack"/>
-<fullyQualifiedTypeName name="java.lang.Class"/>
-<fullyQualifiedTypeName name="java.lang.ClassNotFoundException"/>
-<fullyQualifiedTypeName name="java.sql.DriverManager"/>
 <fullyQualifiedTypeName name="kr.or.ddit.basic.jdbcTest07"/>
 <fullyQualifiedTypeName name="solution.Budget"/>
 <fullyQualifiedTypeName name="java.util.Arrays"/>
@@ -33,11 +25,9 @@
 <fullyQualifiedTypeName name="java.sql.PreparedStatement"/>
 <fullyQualifiedTypeName name="kr.or.ddit.mvc.service.BoardService"/>
 <fullyQualifiedTypeName name="kr.or.ddit.mvc.dao.IBoardDao"/>
-<fullyQualifiedTypeName name="java.lang.System"/>
 <fullyQualifiedTypeName name="kr.or.ddit.mvc.service.IBoardService"/>
 <fullyQualifiedTypeName name="kr.or.ddit.mvc.controller.BoardController"/>
 <fullyQualifiedTypeName name="java.sql.SQLException"/>
-<fullyQualifiedTypeName name="kr.or.ddit.util.DBUtil3"/>
 <fullyQualifiedTypeName name="java.util.ArrayList"/>
 <fullyQualifiedTypeName name="kr.or.ddit.mvc.vo.BoardVO"/>
 <fullyQualifiedTypeName name="java.util.Map"/>
@@ -60,4 +50,14 @@
 <fullyQualifiedTypeName name="com.ibatis.sqlmap.client.SqlMapClient"/>
 <fullyQualifiedTypeName name="java.lang.Object"/>
 <fullyQualifiedTypeName name="kr.or.ddit.util.SqlMapUtil"/>
+<fullyQualifiedTypeName name="org.apache.log4j.Level"/>
+<fullyQualifiedTypeName name="kr.or.ddit.util.DBUtil3"/>
+<fullyQualifiedTypeName name="org.apache.log4j.Logger"/>
+<fullyQualifiedTypeName name="java.security.MessageDigest"/>
+<fullyQualifiedTypeName name="java.util.Base64"/>
+<fullyQualifiedTypeName name="kr.or.ddit.util.CrytoUtil"/>
+<fullyQualifiedTypeName name="javax.crypto.spec.SecretKeySpec"/>
+<fullyQualifiedTypeName name="javax.crypto.Cipher"/>
+<fullyQualifiedTypeName name="java.lang.System"/>
+<fullyQualifiedTypeName name="javax.crypto.spec.IvParameterSpec"/>
 </qualifiedTypeNameHistroy>
