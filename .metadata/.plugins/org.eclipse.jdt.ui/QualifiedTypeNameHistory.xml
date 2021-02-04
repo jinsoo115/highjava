@@ -54,10 +54,10 @@
 <fullyQualifiedTypeName name="kr.or.ddit.util.DBUtil3"/>
 <fullyQualifiedTypeName name="org.apache.log4j.Logger"/>
 <fullyQualifiedTypeName name="java.security.MessageDigest"/>
-<fullyQualifiedTypeName name="java.util.Base64"/>
-<fullyQualifiedTypeName name="kr.or.ddit.util.CrytoUtil"/>
 <fullyQualifiedTypeName name="javax.crypto.spec.SecretKeySpec"/>
 <fullyQualifiedTypeName name="javax.crypto.Cipher"/>
 <fullyQualifiedTypeName name="java.lang.System"/>
 <fullyQualifiedTypeName name="javax.crypto.spec.IvParameterSpec"/>
+<fullyQualifiedTypeName name="java.util.Base64"/>
+<fullyQualifiedTypeName name="kr.or.ddit.util.CrytoUtil"/>
 </qualifiedTypeNameHistroy>
