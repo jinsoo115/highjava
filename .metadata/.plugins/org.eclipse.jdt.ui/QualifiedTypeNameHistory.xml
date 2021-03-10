@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="kr.or.ddit.basic.jdbcTest07"/>
 <fullyQualifiedTypeName name="solution.Budget"/>
-<fullyQualifiedTypeName name="java.util.Arrays"/>
 <fullyQualifiedTypeName name="solution.FailureLate"/>
 <fullyQualifiedTypeName name="solutionLevel2.Tel"/>
 <fullyQualifiedTypeName name="kr.or.ddit.basic.jdbcTest07_sam"/>
@@ -60,4 +58,6 @@
 <fullyQualifiedTypeName name="javax.crypto.spec.IvParameterSpec"/>
 <fullyQualifiedTypeName name="java.util.Base64"/>
 <fullyQualifiedTypeName name="kr.or.ddit.util.CrytoUtil"/>
+<fullyQualifiedTypeName name="java.lang.ArrayStoreException"/>
+<fullyQualifiedTypeName name="java.util.Arrays"/>
 </qualifiedTypeNameHistroy>
