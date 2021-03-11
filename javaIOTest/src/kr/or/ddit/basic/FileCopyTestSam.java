@@ -20,12 +20,12 @@ public class FileCopyTestSam {
 			FileInputStream fin = new FileInputStream(file);
 			BufferedInputStream bis = new BufferedInputStream(fin);
 			
-			// 복사될 파일 ㅅ ㅡ트림 객체 생성
+			// 복사될 파일 스트림 객체 생성
 			FileOutputStream fout = new FileOutputStream("d:/d_other/연습용/복사본-코알라.jpg");
 			BufferedOutputStream bout = new BufferedOutputStream(fout);
 			
 			System.out.println("복사 시작...");
-			
+			System.out.println(file);
 			int data; // 읽어온 데이터가 저장될 변수
 			
 			/*while((data = fin.read()) != -1){

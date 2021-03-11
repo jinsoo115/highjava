@@ -1,9 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="solution.Budget"/>
-<fullyQualifiedTypeName name="solution.FailureLate"/>
-<fullyQualifiedTypeName name="solutionLevel2.Tel"/>
-<fullyQualifiedTypeName name="kr.or.ddit.basic.jdbcTest07_sam"/>
 <fullyQualifiedTypeName name="oracle.net.ns.NSProtocol"/>
 <fullyQualifiedTypeName name="kr.or.ddit.util.DBUtil"/>
 <fullyQualifiedTypeName name="kr.or.ddit.util.PropertiesTest"/>
@@ -60,4 +56,8 @@
 <fullyQualifiedTypeName name="kr.or.ddit.util.CrytoUtil"/>
 <fullyQualifiedTypeName name="java.lang.ArrayStoreException"/>
 <fullyQualifiedTypeName name="java.util.Arrays"/>
+<fullyQualifiedTypeName name="java.lang.Integer"/>
+<fullyQualifiedTypeName name="java.awt.image.BufferedImage"/>
+<fullyQualifiedTypeName name="javax.imageio.ImageIO"/>
+<fullyQualifiedTypeName name="java.io.ByteArrayOutputStream"/>
 </qualifiedTypeNameHistroy>
